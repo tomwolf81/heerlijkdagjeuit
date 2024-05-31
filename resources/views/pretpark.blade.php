@@ -24,10 +24,7 @@
         </div>
         <div class="blog_section_2">
             <div class="row">
-
-                
-                
-                                  
+                                
                     <div class="blog_section_2">
                         <div class="row">
                             

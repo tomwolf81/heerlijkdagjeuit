@@ -14,6 +14,7 @@
 @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
 @import url(nice-select.css);
+@import url(single.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
@@ -215,7 +216,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../images/);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -224,7 +225,7 @@ button {
 .header_bg {
     width: 100%;
     float: left;
-    background-image: url(../images/header-bg.png);
+    background-image: url(../images/);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;

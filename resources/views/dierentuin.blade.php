@@ -27,7 +27,7 @@
                  <div class="col-md-6">
                     <div class="blog_box">
                         <img src="{{ $dierentuindag->url ? Storage::url($dierentuindag->url) : asset('images/blog-img1.png') }}" alt="Afbeelding van {{ $dierentuindag->titel }}">
-                        <h4 class="date_text">{{ \Carbon\Carbon::parse($dierentuindag->created_at)->format('d-m-Y') }}</h4>
+                        <h4 class="date_text">{{ \Carbon\Carbon::parse($dierentuindag->datum)->format('d-m-Y') }}</h4>
                         <h4 class="prep_text">{{$dierentuindag->titel}}</h4>
                         <p class="lorem_text">{{$dierentuindag->beschrijving}}</p>
                     </div>
