@@ -48,8 +48,6 @@
             
   
          </ul>
-    
-          
                <form class="form-inline my-2 my-lg-0">
                   <div class="login_bt">
                      <ul>

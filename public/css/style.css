@@ -63,6 +63,8 @@ h6 {
     margin: 0
 }
 
+
+
 h1 {
     font-size: 24px
 }
@@ -216,7 +218,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/);
+    background-image: url(../images/party.jpg);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -261,7 +263,7 @@ button {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: #4c4c4c;
+    color: white;
 }
 
 .navbar-brand {
@@ -319,7 +321,7 @@ button {
 .banner_taital {
     width: 100%;
     font-size: 90px;
-    color: #252525;
+    color: white;
     font-weight: 800;
 }
 
@@ -327,7 +329,7 @@ button {
     width: 100%;
     float: left;
     font-size: 24px;
-    color: #e38773;
+    color: white;
     font-weight: bold;
 }
 
@@ -457,6 +459,7 @@ button {
     margin: 0 auto;
     text-align: center;
     padding-top: 40px;
+    padding-bottom: 100px;
 }
 
 .bulit_icon {
@@ -859,7 +862,7 @@ textarea#comment.massage-bt::placeholder {
     width: 100%;
     float: left;
     height: auto;
-    background-image: url(../images/footer-bg.png);
+    background-image: url(../images/party_footer.jpg);
     background-size: 100% 100%;
     padding: 90px 0px 0px 0px;
 }
@@ -1011,7 +1014,7 @@ textarea#comment.update_mail::placeholder {
 .copyright_section {
     width: 100%;
     float: left;
-    background-color: #d07d6b;
+    background-color: #141313;
     height: auto;
 }
 
@@ -1030,7 +1033,7 @@ textarea#comment.update_mail::placeholder {
 }
 
 .copyright_text a:hover {
-    color: #363636;
+    color: #0e0d0d;
 }
 
 

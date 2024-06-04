@@ -55,24 +55,50 @@ class CategorieController extends Controller
     
         public function Dierentuinshow($id)
     {
-        $dierentuindag = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
+        $dierentuindagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
         ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
         ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
         ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
-        ->where('categorie_dagjeuit.categorie_id', 2)  // Verander categorie_id naar 3 voor 'dierentuin'
-        ->get();
+        ->where('dagjeuits.id', $id)
+        ->first();
+
         
-        
-        return view('dierentuin.show', compact('dierentuindag'));
+        return view('dierentuin.show', compact('dierentuindagje'));
     }
     
+
+
+
+public function frontpage()
+    {
+        
+        $pretparkdagje =  Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
+            ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
+            ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
+            ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
+            ->where('categorie_dagjeuit.categorie_id', 4)
+            ->get();
+
+            return view('pretpark', compact('pretparkdagje'));
+        
+    }
+    
+    
+        
+        public function frontpageshow($id)
+    {
+        $pretparkdagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
+        ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
+        ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
+        ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
+        ->where('dagjeuits.id', $id)
+        ->first();
+
+    return view('pretpark.show', compact('pretparkdagje'));
+    }
+
+
 }
-
-
-
-
-
-
 
 
 
