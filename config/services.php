@@ -14,6 +14,10 @@ return [
     |
     */
 
+    'google_maps' => [
+        'key' => env('AIzaSyDEurBiPb1_RkWi7wgsCzK-Mu9-ZS6vGa8'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

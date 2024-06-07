@@ -1,11 +1,8 @@
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<script src="{{ asset('js/script.js') }}"></script>
-<img src="{{ asset('images/logo.png') }}" alt="Logo">
+<x-layout>
 
-<x-layout>   
 </x-layout>
 
-<body>
+
     <div class="image-section">
         <div class="blog_box">
             <h4 class="title-text">{{ $dierentuindagje->titel }}</h4>

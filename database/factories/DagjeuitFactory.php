@@ -19,13 +19,16 @@ class DagjeuitFactory extends Factory
       
 
         return [
-            'titel' => 'Voorbeeld Titel',
+            'titel' => $this->faker->sentence,
             'beschrijving' => $this->faker->paragraph,
-            'name' => $this->faker->sentence,
             'buiten' => $this->faker->boolean,
             'minder_validen' => $this->faker->boolean,
             'restaurant_aanwezig' => $this->faker->boolean,
-            'datum' => $this->faker->date
+            'datum' => $this->faker->date,
+            'adres' => $this->faker->streetAddress,
+            'postcode' => $this->faker->postcode,
+            'plaats' => $this->faker->city,
+            'foto' => 'images/default.png', // Pas aan naar een geldige standaardafbeelding of gebruik een uploadmechanisme
         ];
-    }
+}
 }

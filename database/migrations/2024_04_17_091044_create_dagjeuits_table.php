@@ -21,6 +21,10 @@ return new class extends Migration
             $table->boolean('buiten')->default(false);
             $table->boolean('minder_validen')->default(false);
             $table->boolean('restaurant_aanwezig')->default(false);
+            $table->string('adres')->nullable();
+            $table->string('postcode')->nullable();
+            $table->string('plaats')->nullable();
+            $table->string('foto')->nullable();
     
         });
     }

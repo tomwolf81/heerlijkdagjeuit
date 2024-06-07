@@ -7,15 +7,13 @@
 
          </div>
       </div>
-      <!-- header section end -->
-      <!-- blog section start -->
       
       <!-- blog section start -->
  <div class="blog_section layout_padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="about_taital">Onze suggesties</h1>
+                <h1 class="about_taital">Pretparken</h1>
                 <div class="bulit_icon"><img src="images/bulit-icon.png"></div>
             </div>
         </div>

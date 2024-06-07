@@ -101,6 +101,18 @@
                 <label><input type="checkbox" name="restaurant_aanwezig" {{ old('restaurant_aanwezig') ? 'checked' : '' }}> Restaurant aanwezig</label>
             </div>
             <div>
+                <label for="adres">Adres</label>
+                <input type="text" id="adres" name="adres" value="{{ old('adres') }}" placeholder="Adres" required>
+            </div>
+            <div>
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode" value="{{ old('postcode') }}" placeholder="Postcode" required>
+            </div>
+            <div>
+                <label for="plaats">Plaats</label>
+                <input type="text" id="plaats" name="plaats" value="{{ old('plaats') }}" placeholder="Plaats" required>
+            </div>
+            <div>
                 <label for="foto">Foto</label>
                 <input type="file" id="foto" name="foto" required>
             </div>

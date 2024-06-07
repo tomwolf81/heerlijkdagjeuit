@@ -13,7 +13,7 @@ class Dagjeuit extends Model
 
     
     
-    protected $fillable = ['titel', 'beschrijving', 'buiten', 'minder_validen', 'restaurant_aanwezig', 'datum'];
+    protected $fillable = ['titel', 'beschrijving', 'buiten', 'minder_validen', 'restaurant_aanwezig', 'datum', 'adres', 'postcode', 'plaats'];
 
     
     public function tickets()
