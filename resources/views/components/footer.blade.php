@@ -22,7 +22,7 @@
              </div>
              <div class="form-group">
                 <textarea class="update_mail" placeholder="Your Email" rows="5" id="comment" name="Your Email"></textarea>
-                <div class="subscribe_bt"><a href="#"><img src="images/teligram-icon.png"></a></div>
+                <div class="subscribe_bt"><a href="#"><img src="#"></a></div>
              </div>
           </div>
        </div>

@@ -6,7 +6,7 @@
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
-@import url(css/font-awesome.min.css);
+
 @import url(meanmenu.css);
 @import url(owl.carousel.min.css);
 @import url(swiper.min.css);
@@ -16,6 +16,17 @@
 @import url(nice-select.css);
 @import url(single.css);
 @import url(jquery.mCustomScrollbar.min.css);
+@import url(bootstrap-grid.css);
+@import url(bootstrap-grid.css.map);
+@import url(bootstrap-grid.min.css);
+@import url(bootstrap-reboot.css);
+@import url(bootstrap-reboot.css.map);
+@import url(bootstrap-reboot.min.css.map);
+@import url(bootstrap.min.css);
+@import url(font-awesome.min.css);
+@import url(jquery.fancybox.min.css);
+
+
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
@@ -228,7 +239,7 @@ button {
 .header_bg {
     width: 100%;
     float: left;
-    background-image: url(../images/);
+    background-image: url(../images/party.jpg);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;

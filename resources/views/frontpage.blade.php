@@ -29,7 +29,7 @@
        </div>
     </div>
   </div>
-</div>
+
  <!-- header section end -->
 
  <div class="coffee_section layout_padding">
@@ -121,4 +121,6 @@
                         </div>
                      </div>     
  
- <x-footer></x-footer>
+ <x-footer>
+   
+ </x-footer>

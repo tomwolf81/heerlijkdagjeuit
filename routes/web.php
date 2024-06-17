@@ -22,4 +22,3 @@ Route::get('/dierentuin/{id}', [CategorieController::class, 'Dierentuinshow'])->
 
 Route::get('/dashboard', [DagjeuitController::class, 'create'])->name('dashboard');
 Route::post('/dagjeuit/store', [DagjeuitController::class, 'store'])->name('dagjeuit.store');
-

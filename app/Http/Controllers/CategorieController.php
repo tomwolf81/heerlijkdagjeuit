@@ -12,34 +12,7 @@ class CategorieController extends Controller
 {
 
    
-    public function showPretpark()
-    {
-        
-        $pretparkdagje =  Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
-            ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
-            ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
-            ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
-            ->where('categorie_dagjeuit.categorie_id', 4)
-            ->get();
-
-            return view('pretpark', compact('pretparkdagje'));
-        
-    }
-    
-    
-        
-        public function Pretparkshow($id)
-    {
-        $pretparkdagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
-        ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
-        ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
-        ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
-        ->where('dagjeuits.id', $id)
-        ->first();
-
-    return view('pretpark.show', compact('pretparkdagje'));
-    }
-    
+   
     public function showDierentuin()
     
 {
@@ -69,33 +42,7 @@ class CategorieController extends Controller
 
 
 
-public function frontpage()
-    {
-        
-        $pretparkdagje =  Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
-            ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
-            ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
-            ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
-            ->where('categorie_dagjeuit.categorie_id', 4)
-            ->get();
 
-            return view('pretpark', compact('pretparkdagje'));
-        
-    }
-    
-    
-        
-        public function frontpageshow($id)
-    {
-        $pretparkdagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
-        ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
-        ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
-        ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
-        ->where('dagjeuits.id', $id)
-        ->first();
-
-    return view('pretpark.show', compact('pretparkdagje'));
-    }
 
 
 }
