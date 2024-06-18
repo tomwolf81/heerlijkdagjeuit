@@ -35,6 +35,34 @@
     transition: ease all 0.5s;
 }
 
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Voeg wat marge toe tussen de rijen */
+}
+
+.blog_box {
+    flex-grow: 1; /* Zorgt ervoor dat de .blog_box de beschikbare ruimte opvult */
+}
+
+.read_bt {
+    align-self: flex-start; /* Plaatst de lees meer knop aan de onderkant */
+}
+
+
+
+
+
+
+
+
 html {
     scroll-behavior: smooth;
 }

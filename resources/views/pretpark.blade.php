@@ -19,21 +19,19 @@
         </div>
         <div class="blog_section_2">
             <div class="row">
-                
                 @foreach ($pretparkdagje as $pretparkdag)
-                
-                 <div class="col-md-6">
-                    <div class="blog_box">
-                        <img src="{{ $pretparkdag->url ? Storage::url($pretparkdag->url) : asset('images/blog-img1.png') }}" alt="Afbeelding van {{ $pretparkdag->titel }}">
-                        <h4 class="date_text">{{ \Carbon\Carbon::parse($pretparkdag->datum)->format('d-m-Y') }}</h4>
-                        <h4 class="prep_text">{{$pretparkdag->titel}}</h4>
-                        <p class="lorem_text">{{$pretparkdag->beschrijving}}</p>
+                    <div class="col-md-6">
+                        <div class="blog_box">
+                            <img src="{{ $pretparkdag->url ? Storage::url($pretparkdag->url) : asset('images/blog-img1.png') }}" alt="Afbeelding van {{ $pretparkdag->titel }}">
+                            <h4 class="date_text">{{ \Carbon\Carbon::parse($pretparkdag->datum)->format('d-m-Y') }}</h4>
+                            <h4 class="prep_text">{{$pretparkdag->titel}}</h4>
+                            <p class="lorem_text">{{$pretparkdag->beschrijving}}</p>
+                        </div>
+                        <div class="read_bt"><a href="{{ route('pretpark.show', ['id' => $pretparkdag->id]) }}">lees meer</a></div>
                     </div>
-                    <div class="read_bt"><a href="{{ route('pretpark.show', ['id' => $pretparkdag->id]) }}">lees meer</a></div>
-                </div>
-                
                 @endforeach
             </div>
+            
         </div>
     </div>
 </div>

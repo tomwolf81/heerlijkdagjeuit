@@ -9,10 +9,22 @@
         </div>
         
         <p class="description-text">{{ $pretparkdagje->beschrijving }}</p>
+        
+            <p class="description-text">
+                Buiten: {{ $pretparkdagje->buiten ? 'Aanwezig' : 'Niet aanwezig' }}
+            </p>  
+            <p class="description-text">
+                Minder validen: {{ $pretparkdagje->minder_validen ? 'Aanwezig' : 'Niet aanwezig' }}
+            </p>
+            <p class="description-text">
+                Restaurant aanwezig: {{ $pretparkdagje->restaurant_aanwezig ? 'Aanwezig' : 'Niet aanwezig' }}
+            </p>
+        </div>
     </div>
 </div>
 
- 
+
+
 
         @php
         $address = urlencode($pretparkdagje->adres . ', ' . $pretparkdagje->postcode . ' ' . $pretparkdagje->plaats);
@@ -21,7 +33,7 @@
         
     <style>
         #map {
-            height: 400px;
+            height: 300px;
             width: 100%;
         }
     </style>

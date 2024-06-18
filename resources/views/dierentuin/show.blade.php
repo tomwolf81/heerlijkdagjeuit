@@ -2,7 +2,7 @@
 
 </x-layout>
 
-</body>
+
     <div class="image-section">
         <div class="blog_box">
             <h4 class="title-text">{{ $dierentuindagje->titel }}</h4>
