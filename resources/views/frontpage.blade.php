@@ -18,17 +18,18 @@
                             <h5 class="tasty_text">Kijk naar onze uitjes!</h5>
                             <p class="banner_text"></p>
                             <div class="btn_main">
-                              
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-              </div>
-          </div>
-       </div>
-    </div>
-  </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+             </div>
+         </div>
+      </div>
+   </div>
+   
+ </div>       
+                           
 
  <!-- header section end -->
 

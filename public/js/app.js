@@ -13,6 +13,9 @@ import './plugins/jquery.validate.js';
 import './plugins/jquery-3.0.0.min.js';
 import './plugins/modernizer.js';
 import './plugins/popper.min.js';
+import './plugins/getPlaceDetails.js';
+import './plugins/maps.js';
+
 
 
 import './vendor/bootstrap.js';

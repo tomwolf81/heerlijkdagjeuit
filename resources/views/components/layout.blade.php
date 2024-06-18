@@ -50,14 +50,9 @@
                   </ul>
                </div>
             </nav>
-         </div>
-      </div>
+         
 
-      <!-- Content Section -->
-      <div class="content">
-         {{ $slot }}
-      </div>
-
+      
       
       
  
