@@ -42,7 +42,7 @@
                     zoom: 15 
                 });
 
-                var marker = new google.maps.marker.AdvancedMarkerElement({
+                var marker = new google.maps.Marker({
                     map: map,
                     position: results[0].geometry.location
                 });
@@ -52,6 +52,9 @@
         });
     }
 </script>
+<div class="blog_box">
+
+</div>
 
 <x-footer>
 </x-footer>
