@@ -37,26 +37,120 @@
 
 
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Ruimte tussen de kolommen */
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #f8f8f8; /* Achtergrondkleur voor de kolommen */
+    padding: 10px;
+    border: 1px solid #ddd; /* Rand om de kolommen */
+    box-sizing: border-box; /* Zorgt ervoor dat padding en border meegerekend worden in de breedte */
+}
+
+/* Optioneel: styling voor de blog_box */
+.blog_box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.date_text, .prep_text, .lorem_text {
+    margin: 10px 0;
+}
+
+
+
+
+
+
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
-.col-md-6 {
+.blog_section {
+    width: 100%;
+    float: left;
+}
+
+.blog_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 60px;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 15px; /* Voeg wat marge toe tussen de rijen */
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .blog_box {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px;
+    padding: 0px 0px 30px 0px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
     flex-grow: 1; /* Zorgt ervoor dat de .blog_box de beschikbare ruimte opvult */
 }
 
-.read_bt {
-    align-self: flex-start; /* Plaatst de lees meer knop aan de onderkant */
+.blog_img {
+    width: 100%;
 }
 
+.blog_box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+}
 
+.date_text {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    background-color: red;    
+    top: -10px;
+    ;
+}
+
+.prep_text {
+    width: 100%;
+    font-size: 20px;
+    color: #3b3b3b;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px 20px 10px 20px;
+}
+
+.lorem_text {
+    width: 100%;
+    font-size: 14px;
+    color: #3b3b3b;
+    margin: 0px;
+    padding: 0px 20px;
+}
+
+.read_bt {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .blog_box {
+        width: 45%; /* Twee kolommen op middelgrote schermen */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog_box {
+        width: 100%; /* Eén kolom op kleine schermen */
+    }
+}
 
 
 
@@ -737,60 +831,7 @@ button {
 
 /* blog section start */
 
-.blog_section {
-    width: 100%;
-    float: left;
-}
 
-.blog_section_2 {
-    width: 100%;
-    float: left;
-    padding-top: 60px;
-}
-
-.blog_box {
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 20px 0px;
-    padding: 0px 0px 30px 0px;
-}
-
-.blog_img {
-    width: 100%;
-}
-
-.date_text {
-    width: 100px;
-    font-size: 18px;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 20px 0px;
-    background-color: red;
-    position: absolute;
-    top: -10px;
-    left: 5px;
-}
-
-.prep_text {
-    width: 100%;
-    font-size: 20px;
-    color: #3b3b3b;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 20px 20px 10px 20px;
-}
-
-.lorem_text {
-    width: 100%;
-    font-size: 14px;
-    color: #3b3b3b;
-    margin: 0px;
-    padding: 0px 20px;
-}
-
-
-/* blog section end */
 
 
 /* contact section start */

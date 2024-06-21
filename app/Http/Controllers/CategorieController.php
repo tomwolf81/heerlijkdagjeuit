@@ -16,7 +16,7 @@ class CategorieController extends Controller
     public function showDierentuin()
     
 {
-    $dierentuindagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
+    $dierentuindagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.datum', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
         ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
         ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
         ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
@@ -28,7 +28,7 @@ class CategorieController extends Controller
     
         public function Dierentuinshow($id)
     {
-        $dierentuindagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
+        $dierentuindagje = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.datum',  'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
         ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
         ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
         ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
