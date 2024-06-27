@@ -51,6 +51,18 @@
     </div>
  </div>
  
- 
+  <!-- copyright section end -->
+      <!-- Javascript files-->
+
+     
+      
+      <script src="{{ asset('public/js/vendor/jquery.min') }}"></script>
+      <script src="{{ asset('public/js/custom/custom') }}"></script>
+      <script src="{{ asset('js/boo') }}"></script>
+      <script src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
+      <script src="{{ asset('js/plugin.js') }}"></script>
+      <!-- sidebar -->
+      <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ asset('js/custom.js') }}"></script>
 </body>
 </html>

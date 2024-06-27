@@ -8,6 +8,8 @@ use App\Http\Controllers\CategorieController;
 
 
 Route::get('/', [DagjeuitController::class, 'frontpage']);
+Route::get('/', [DagjeuitController::class, 'showFrontpage'])->name('frontpage');
+
 
 Route::post('/register', [UserController::class, 'register']);
 

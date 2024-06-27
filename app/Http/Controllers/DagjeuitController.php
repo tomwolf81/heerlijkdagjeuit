@@ -82,4 +82,23 @@ class DagjeuitController extends Controller
             return redirect()->back()->with('error', 'Er is een fout opgetreden bij het toevoegen van het dagje uit. Probeer het opnieuw.');
         }
     }
+    public function showFrontpage()
+{
+    $pretparkdag = Dagjeuit::select('dagjeuits.name', 'dagjeuits.beschrijving', 'dagjeuits.titel', 'dagjeuits.datum', 'dagjeuits.created_at', 'dagjeuits.id', 'fotos.url', 'categorie_dagjeuit.categorie_id')
+        ->join('categorie_dagjeuit', 'dagjeuits.id', '=', 'categorie_dagjeuit.dagjeuit_id')
+        ->join('categories', 'categories.id', '=', 'categorie_dagjeuit.categorie_id')
+        ->leftJoin('fotos', 'dagjeuits.id', '=', 'fotos.dagjeuit_id')
+        ->where('categorie_dagjeuit.categorie_id', 1)
+        ->get();
+
+    // Controleer of er items zijn voordat je een willekeurig item selecteert
+    if ($pretparkdag->isNotEmpty()) {
+        $randomPretparkdag = $pretparkdag->random();
+    } else {
+        $randomPretparkdag = null; // Voor het geval er geen items zijn
+    }
+
+    return view('frontpage', compact('randomPretparkdag'));
+}
+
 }
