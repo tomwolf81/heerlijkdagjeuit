@@ -101,42 +101,29 @@
             <div class="carousel-item active">
                <div class="container-fluid">
                   <div class="row">
-                     <div class="col-lg-3 col-md-6">
-                       @if ($randomPretparkdag)
-                       <div class="coffee_img">
-                         <img src="{{ $randomPretparkdag->url ? Storage::url($randomPretparkdag->url) : asset('images/blog-img1.png') }}" alt="Afbeelding van {{ $randomPretparkdag->titel }}">
-                       </div>
-                       <h3 class="types_text">{{ $randomPretparkdag->titel }}</h3>
-                       <p class="looking_text">{{ $randomPretparkdag->beschrijving }}</p>
-                       <div class="read_bt"><a href="{{ route('pretpark.show', ['id' => $randomPretparkdag->id]) }}">Lees meer</a></div>
-                       @else
-                       <p>Geen items beschikbaar.</p>
-                       @endif
-                     </div>
-                     <div class="col-lg-3 col-md-6">
-                        <div class="coffee_img"><img src="images/img-2.png" alt="Image 2"></div>
-                        <h3 class="types_text">BEAN VARIETIES</h3>
-                        <p class="looking_text">Looking at its layout. The point of</p>
-                        <div class="read_bt"><a href="#">Read More</a></div>
-                     </div>
-                     <div class="col-lg-3 col-md-6">
-                        <div class="coffee_img"><img src="images/img-3.png" alt="Image 3"></div>
-                        <h3 class="types_text">COFFEE & PASTRY</h3>
-                        <p class="looking_text">Looking at its layout. The point of</p>
-                        <div class="read_bt"><a href="#">Read More</a></div>
-                     </div>
-                     <div class="col-lg-3 col-md-6">
-                        <div class="coffee_img"><img src="images/img-4.png" alt="Image 4"></div>
-                        <h3 class="types_text">COFFEE TO GO</h3>
-                        <p class="looking_text">Looking at its layout. The point of</p>
-                        <div class="read_bt"><a href="#">Read More</a></div>
-                     </div>
+                     @if ($dagjesuit->isEmpty())
+                        <p>Geen items beschikbaar.</p>
+                     @else
+                        @foreach ($dagjesuit as $item)
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img">
+                                 <img src="{{ $item->url ? Storage::url($item->url) : asset('images/blog-img1.png') }}" alt="Afbeelding van {{ $item->titel }}">
+                              </div>
+                              <h3 class="types_text">{{ $item->titel }}</h3>
+                              <p class="looking_text">{{ $item->beschrijving }}</p>
+                              <div class="read_bt"><a href="{{ route('pretpark.show', ['id' => $item->id]) }}">Lees meer</a></div>
+                           </div>
+                        @endforeach
+                     @endif
                   </div>
                </div>
             </div>
          </div>
       </div>
    </div>
+   
+   
+
    
 
              <div class="coffee_section_2">
